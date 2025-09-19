@@ -8,7 +8,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import base64
+@app.route('/')
+def home():
+    return render_template('index.html')
 
+...
+
+if __name__ == '__main__':
 # This is a crucial line for running in a non-GUI environment like a server
 matplotlib.use('Agg') 
 
@@ -145,3 +151,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
